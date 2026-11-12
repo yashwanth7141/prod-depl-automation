@@ -1,0 +1,29 @@
+{
+    "python_executable": "/home/postgres/yashwanth/codebase/thirteen/bin/python3.12",
+
+    "stage": {
+        "host": "archive223.estuate.com",
+        "port": 22,
+        "username": "postgres",
+        "source_path": "/home/postgres/par/optimtab"
+    },
+
+    "production": {
+        "parquet_destination": "/home/postgres/yashwanth/deployment_automation_script/prod-depl-automation/test"
+    },
+    
+    "permissions": {
+        "owner": "postgres",
+        "group": "postgres",
+        "mode": "775"
+    },
+    
+    "external_table": {
+        "application_path": "/home/postgres/yashwanth/ext-tab-script-compiled/compiled_script/parquet-to-ext-tab"
+    },
+    
+    "retention_agent": {
+        "application_path": "/home/postgres/yashwanth/retention-agent/retention-policy-compiled",
+        "retention_date": "2028-12-31"
+    }
+}
